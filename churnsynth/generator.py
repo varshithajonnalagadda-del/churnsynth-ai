@@ -200,15 +200,27 @@ class SDVGenerator(_BaseGenerator):
     def __init__(self, seed: int = 0):
         self.seed = seed
 
-    def fit(self, df: pd.DataFrame):
-        from sdv.metadata import Metadata
+        def fit(self, df: pd.DataFrame):
+        from sdv.metadata import SingleTableMetadata
         from sdv.single_table import GaussianCopulaSynthesizer
 
         rng = np.random.default_rng(self.seed)
         m = to_model_frame(df, rng)
         for c in CAT_MODEL:
             m[c] = m[c].astype(str)
-        metadata = Metadata.detect_from_dataframe(m, table_name="subscriptions")
+
+       metadata = SingleTableMetadata()
+       metadata.detect_from_dataframes(data=m)
+
+        for c in CAT_MODEL:
+            metadata.update_column(column_name=c, table_name="subscriptions", sdtype="categorical")
+
+        self.synth = GaussianCopulaSynthesizer(metadata, enforce_min_max_values=True)
+        self.synth.fit(m)
+        self.metadata = metadata
+        self.n_source = len(m)
+        self.base_churn_rate = float(m["subscription_status"].isin(CHURN_STATUSES).mean())
+        return self
         for c in CAT_MODEL:
             metadata.update_column(column_name=c, table_name="subscriptions", sdtype="categorical")
         self.synth = GaussianCopulaSynthesizer(metadata, enforce_min_max_values=True)
