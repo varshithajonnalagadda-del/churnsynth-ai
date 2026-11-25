@@ -1,0 +1,148 @@
+{
+  "final": {
+    "n_real": 4200,
+    "n_synthetic": 4200,
+    "numeric_similarity": {
+      "tenure_months": 0.9792857142857142,
+      "monthly_price": 0.9771428571428571,
+      "monthly_logins": 0.9859523809523809,
+      "avg_session_minutes": 0.9814285714285714,
+      "support_tickets": 0.9914285714285714,
+      "payment_failures": 0.9976190476190476,
+      "last_login_days_ago": 0.9916666666666667
+    },
+    "categorical_similarity": {
+      "plan_type": 0.9966666666666667,
+      "billing_cycle": 0.9957142857142858,
+      "country": 0.9885714285714285,
+      "acquisition_channel": 0.9819047619047618,
+      "auto_renew": 0.9847619047619047,
+      "discount_used": 0.9945238095238095,
+      "subscription_status": 0.995
+    },
+    "statistical_similarity": 0.9886904761904762,
+    "correlation": {
+      "mean_abs_corr_diff": 0.04177439328058911,
+      "score": 0.5822560671941089
+    },
+    "validity": {
+      "overall_row_pass_rate": 1.0,
+      "all_rules_passed": true
+    },
+    "churn": {
+      "real_churn_rate": 0.25285714285714284,
+      "synthetic_churn_rate": 0.25452380952380954,
+      "overall_rate_gap": 0.0016666666666667052,
+      "mean_abs_group_churn_gap": 0.02808076292563404,
+      "score": 0.7191923707436596,
+      "signal_ratios": {
+        "monthly_logins": {
+          "real_churned_vs_active_ratio": 0.6231050055017316,
+          "synthetic_churned_vs_active_ratio": 0.7741748327173652
+        },
+        "support_tickets": {
+          "real_churned_vs_active_ratio": 1.3134313556122874,
+          "synthetic_churned_vs_active_ratio": 1.205341427441817
+        },
+        "payment_failures": {
+          "real_churned_vs_active_ratio": 2.381801532209931,
+          "synthetic_churned_vs_active_ratio": 1.6684104212123807
+        },
+        "last_login_days_ago": {
+          "real_churned_vs_active_ratio": 2.64714227417332,
+          "synthetic_churned_vs_active_ratio": 1.6987732052368276
+        }
+      }
+    },
+    "privacy": {
+      "exact_copy_rate": 0.0,
+      "passed": true
+    },
+    "churn_model": {
+      "auc_trained_on_real": 0.9409387638383921,
+      "auc_trained_on_synthetic": 0.8879022835900159,
+      "score": 0.9436345038735322
+    },
+    "components": {
+      "statistical_similarity": 0.9886904761904762,
+      "relationship_preservation": 0.5822560671941089,
+      "validity": 1.0,
+      "churn_pattern": 0.7191923707436596,
+      "churn_model_utility": 0.9436345038735322
+    },
+    "overall_score": 0.8552888212032039
+  },
+  "baseline": {
+    "n_real": 4200,
+    "n_synthetic": 4200,
+    "numeric_similarity": {
+      "tenure_months": 0.9811904761904762,
+      "monthly_price": 0.9630952380952381,
+      "monthly_logins": 0.9814285714285714,
+      "avg_session_minutes": 0.9864285714285714,
+      "support_tickets": 0.9866666666666667,
+      "payment_failures": 0.9935714285714285,
+      "last_login_days_ago": 0.9778571428571429
+    },
+    "categorical_similarity": {
+      "plan_type": 0.9935714285714285,
+      "billing_cycle": 0.9940476190476191,
+      "country": 0.9769047619047619,
+      "acquisition_channel": 0.9876190476190476,
+      "auto_renew": 0.9942857142857143,
+      "discount_used": 0.9871428571428572,
+      "subscription_status": 0.9897619047619047
+    },
+    "statistical_similarity": 0.9852551020408162,
+    "correlation": {
+      "mean_abs_corr_diff": 0.09941193561434895,
+      "score": 0.005880643856510548
+    },
+    "validity": {
+      "overall_row_pass_rate": 1.0,
+      "all_rules_passed": true
+    },
+    "churn": {
+      "real_churn_rate": 0.25285714285714284,
+      "synthetic_churn_rate": 0.25976190476190475,
+      "overall_rate_gap": 0.0069047619047619135,
+      "mean_abs_group_churn_gap": 0.04390270671934698,
+      "score": 0.5609729328065303,
+      "signal_ratios": {
+        "monthly_logins": {
+          "real_churned_vs_active_ratio": 0.6231050055017316,
+          "synthetic_churned_vs_active_ratio": 0.9938173193854944
+        },
+        "support_tickets": {
+          "real_churned_vs_active_ratio": 1.3134313556122874,
+          "synthetic_churned_vs_active_ratio": 0.9882318179981726
+        },
+        "payment_failures": {
+          "real_churned_vs_active_ratio": 2.381801532209931,
+          "synthetic_churned_vs_active_ratio": 1.0268566816304754
+        },
+        "last_login_days_ago": {
+          "real_churned_vs_active_ratio": 2.64714227417332,
+          "synthetic_churned_vs_active_ratio": 1.0058742231250843
+        }
+      }
+    },
+    "privacy": {
+      "exact_copy_rate": 0.0,
+      "passed": true
+    },
+    "churn_model": {
+      "auc_trained_on_real": 0.9409387638383921,
+      "auc_trained_on_synthetic": 0.662317905143184,
+      "score": 0.7038905512207575
+    },
+    "components": {
+      "statistical_similarity": 0.9852551020408162,
+      "relationship_preservation": 0.005880643856510548,
+      "validity": 1.0,
+      "churn_pattern": 0.5609729328065303,
+      "churn_model_utility": 0.7038905512207575
+    },
+    "overall_score": 0.6922854430754676
+  }
+}

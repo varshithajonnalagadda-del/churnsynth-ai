@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-11-22T18:25:29.419126+00:00",
+  "generator": "gaussian-copula (numpy/scipy fallback)",
+  "sdv_installed": false,
+  "seed": 42,
+  "source_file": "data/source_subscription_data.csv",
+  "source_rows": 6000,
+  "synthetic_rows": 5000,
+  "source_churn_rate": 0.2528,
+  "synthetic_churn_rate": 0.2532,
+  "modelled_columns": [
+    "signup_date",
+    "tenure (as ratio of lifetime)",
+    "plan_type",
+    "billing_cycle",
+    "country",
+    "acquisition_channel",
+    "auto_renew",
+    "discount_used",
+    "monthly_logins",
+    "avg_session_minutes",
+    "support_tickets",
+    "payment_failures",
+    "last_login_days_ago",
+    "subscription_status"
+  ],
+  "derived_columns": [
+    "customer_id",
+    "monthly_price",
+    "tenure_months",
+    "churned",
+    "churn_date"
+  ],
+  "business_rules_passed": true,
+  "rows_passing_all_rules": 1.0
+}

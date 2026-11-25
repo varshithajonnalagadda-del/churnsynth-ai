@@ -1,0 +1,110 @@
+{
+  "customer_id": {
+    "dtype": "object",
+    "description": "Unique synthetic customer identifier (CUST-000001 ...). Never copied from real data.",
+    "missing": 0,
+    "unique": 6000
+  },
+  "signup_date": {
+    "dtype": "datetime64[ns]",
+    "description": "Date the subscription started.",
+    "missing": 0,
+    "unique": 1025
+  },
+  "plan_type": {
+    "dtype": "object",
+    "description": "Subscription tier: Basic, Standard or Premium.",
+    "missing": 0,
+    "unique": 3
+  },
+  "billing_cycle": {
+    "dtype": "object",
+    "description": "monthly or annual billing.",
+    "missing": 0,
+    "unique": 2
+  },
+  "monthly_price": {
+    "dtype": "float64",
+    "description": "Effective price per month; determined by plan_type and billing_cycle.",
+    "missing": 0,
+    "unique": 6
+  },
+  "country": {
+    "dtype": "object",
+    "description": "Customer country code.",
+    "missing": 0,
+    "unique": 7
+  },
+  "acquisition_channel": {
+    "dtype": "object",
+    "description": "Marketing channel that brought the customer in.",
+    "missing": 0,
+    "unique": 5
+  },
+  "auto_renew": {
+    "dtype": "int64",
+    "description": "1 if auto-renewal is on, else 0.",
+    "missing": 0,
+    "unique": 2
+  },
+  "discount_used": {
+    "dtype": "int64",
+    "description": "1 if a promotional discount was used, else 0.",
+    "missing": 0,
+    "unique": 2
+  },
+  "tenure_months": {
+    "dtype": "int64",
+    "description": "Months the customer has been (or was) subscribed.",
+    "missing": 0,
+    "unique": 36
+  },
+  "monthly_logins": {
+    "dtype": "int64",
+    "description": "Average logins per month (engagement).",
+    "missing": 0,
+    "unique": 34
+  },
+  "avg_session_minutes": {
+    "dtype": "float64",
+    "description": "Average session length in minutes (engagement).",
+    "missing": 0,
+    "unique": 477
+  },
+  "support_tickets": {
+    "dtype": "int64",
+    "description": "Number of support tickets raised.",
+    "missing": 0,
+    "unique": 7
+  },
+  "payment_failures": {
+    "dtype": "int64",
+    "description": "Number of failed payment attempts.",
+    "missing": 0,
+    "unique": 5
+  },
+  "last_login_days_ago": {
+    "dtype": "int64",
+    "description": "Days since last login at snapshot date.",
+    "missing": 0,
+    "unique": 96
+  },
+  "subscription_status": {
+    "dtype": "object",
+    "description": "active, paused, cancelled or expired.",
+    "missing": 0,
+    "unique": 4
+  },
+  "churned": {
+    "dtype": "int64",
+    "description": "1 if status is cancelled/expired, else 0 (the churn label).",
+    "missing": 0,
+    "unique": 2
+  },
+  "churn_date": {
+    "dtype": "datetime64[ns]",
+    "description": "Date of churn; empty for non-churned customers.",
+    "missing": 4483,
+    "unique": 628
+  }
+}
